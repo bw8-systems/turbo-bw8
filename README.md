@@ -18,6 +18,7 @@ The Programming Model of the extant system is described below.
 - 1x 16-bit dedicated Stack Pointer, `sp`.
 
 **Bus Interaction**
+
 A 4-bit Bank Register (`br`) extends the internal address registers from 16 bits to 20 bits. This creates a 1 Mword physical address space. The content of the register is only modifiable from the supervisory privilege level, which effectively divides the 1 Mword physical space into 16x 64 Kword "virtual" spaces, which provides a simple layer of process isolation.
 
 The Control Unit (CU) produces line `D/~C` which signifies via the system bus the memory access type of the current memory operation, specifically whether its a data or code access. When paired with `br`, this provides another doubling of the physical address space, allowing for 16x 128 Kword spaces split as 64K code and 64K data.
@@ -26,3 +27,9 @@ The ISA has two families of bus access instructions: load and store (`ld`/`st`) 
 
 ### Project Goals
 - Construction of homebrew system in discrete logic on custom PCBs.
+- Flatly accessbible system resources; peekable and pokeable memory and IO devices.
+- Easy to read and write assembly.
+- Easy to codegen assembly.
+- Capable of performing pre-emptive multitasking with a UNIX-like kernel.
+
+# DOCUMENT WORK IN PROGRESS
