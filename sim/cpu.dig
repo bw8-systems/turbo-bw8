@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>regfile.dig</elementName>
+      <elementAttributes/>
+      <pos x="640" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>segfile.dig</elementName>
+      <elementAttributes/>
+      <pos x="640" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Add</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>ALU</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="940" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RAMAsync</elementName>
+      <elementAttributes/>
+      <pos x="1100" y="180"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="780" y="180"/>
+      <p2 x="1100" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="200"/>
+      <p2 x="940" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="1000" y="200"/>
+      <p2 x="1100" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="780" y="220"/>
+      <p2 x="940" y="220"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
