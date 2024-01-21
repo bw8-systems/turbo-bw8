@@ -26,14 +26,6 @@
     a3 => 0b11
 }
 
-#ruledef 
-#ruledef inst {
-    _binop {dst: reg}, {src: reg}, {func: BinFunc} => 0b0`0 @ src @ dst @ 0b0000 @ 0b0001
-}
-
-#fn binop() => {
-
-}
 
 #ruledef bw8 {
     mov {dst: reg}, {src: reg} => 0b0`0 @ src @ dst @ 0b0000 @ 0b000
@@ -61,3 +53,18 @@
 #ruledef alias {
     nop => asm {mov r0, r0}
 }
+
+; Instruction Set Changes:
+;   1a. Move PC into address registers. Allows for far-jump calculations.
+;   1b. OR - `auipc`-like instruction to load PC and add value to it.
+;   
+
+; For context, this is the model:
+;     - 16-bit memory bus
+;     - 16-bit single-cycle instructions
+;     - 16x 16-bit registers
+;     - Hardcoded LR
+;     - 4x segment registers for 24-bit addresses (Code, Data; User/Super)
+;     - Byte addressing instructions *only*
+
+; So basically, imagine an Intel 8088, then squint your eyes.
