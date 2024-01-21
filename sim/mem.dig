@@ -3,6 +3,15 @@
   <version>2</version>
   <attributes>
     <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>153</red>
+        <green>204</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
       <string>romContent</string>
       <romList>
         <roms/>
@@ -11,15 +20,6 @@
     <entry>
       <string>Width</string>
       <int>6</int>
-    </entry>
-    <entry>
-      <string>backgroundColor</string>
-      <awt-color>
-        <red>153</red>
-        <green>204</green>
-        <blue>255</blue>
-        <alpha>255</alpha>
-      </awt-color>
     </entry>
   </attributes>
   <visualElements>
@@ -161,14 +161,10 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>addr</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>16</int>
+          <string>MemRdEn</string>
         </entry>
       </elementAttributes>
-      <pos x="160" y="140"/>
+      <pos x="120" y="220"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -193,20 +189,90 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>byte/word</string>
+          <string>MemWrEn</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>2</int>
         </entry>
       </elementAttributes>
-      <pos x="160" y="420"/>
+      <pos x="120" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
+          <string>DataIn</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Addr</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
           <string>sxt/zxt</string>
         </entry>
       </elementAttributes>
       <pos x="160" y="380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>byte/word</string>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Clock</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="340" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="360" y="-40"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -233,6 +299,10 @@
     <wire>
       <p1 x="160" y="420"/>
       <p2 x="880" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="-40"/>
+      <p2 x="360" y="-40"/>
     </wire>
     <wire>
       <p1 x="500" y="200"/>

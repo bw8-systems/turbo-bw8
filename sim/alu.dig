@@ -42,14 +42,14 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Lhs</string>
+          <string>AluOp</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>16</int>
+          <int>4</int>
         </entry>
       </elementAttributes>
-      <pos x="500" y="300"/>
+      <pos x="180" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -94,22 +94,14 @@
       <pos x="360" y="540"/>
     </visualElement>
     <visualElement>
-      <elementName>In</elementName>
+      <elementName>Clock</elementName>
       <elementAttributes>
         <entry>
-          <string>small</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>Label</string>
-          <string>AluOp</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>4</int>
+          <string>clk</string>
         </entry>
       </elementAttributes>
-      <pos x="180" y="200"/>
+      <pos x="-20" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -219,15 +211,43 @@
       <elementName>Multiplexer</elementName>
       <elementAttributes>
         <entry>
-          <string>Bits</string>
-          <int>16</int>
-        </entry>
-        <entry>
           <string>Selector Bits</string>
           <int>2</int>
         </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
       </elementAttributes>
       <pos x="720" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Lhs</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="500" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="0" y="380"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -322,6 +342,10 @@
     <wire>
       <p1 x="200" y="700"/>
       <p2 x="260" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="380"/>
+      <p2 x="0" y="380"/>
     </wire>
     <wire>
       <p1 x="240" y="280"/>
