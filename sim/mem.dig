@@ -161,7 +161,11 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>MemRdEn</string>
+          <string>MemMode</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
         </entry>
       </elementAttributes>
       <pos x="120" y="220"/>
@@ -183,20 +187,6 @@
         </entry>
       </elementAttributes>
       <pos x="220" y="140"/>
-    </visualElement>
-    <visualElement>
-      <elementName>In</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>MemWrEn</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>2</int>
-        </entry>
-      </elementAttributes>
-      <pos x="120" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
