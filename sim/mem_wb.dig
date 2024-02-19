@@ -3,6 +3,15 @@
   <version>2</version>
   <attributes>
     <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>204</red>
+        <green>153</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
       <string>romContent</string>
       <romList>
         <roms/>
@@ -11,15 +20,6 @@
     <entry>
       <string>Width</string>
       <int>10</int>
-    </entry>
-    <entry>
-      <string>backgroundColor</string>
-      <awt-color>
-        <red>204</red>
-        <green>153</green>
-        <blue>255</blue>
-        <alpha>255</alpha>
-      </awt-color>
     </entry>
   </attributes>
   <visualElements>
@@ -103,7 +103,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>WrBackEn</string>
+          <string>WrBackEn&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -168,14 +168,14 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>MemRes</string>
+          <string>AluRes&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="580" y="480"/>
+      <pos x="580" y="340"/>
     </visualElement>
     <visualElement>
       <elementName>Register</elementName>
@@ -233,14 +233,14 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>AluRes</string>
+          <string>MemRes&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>16</int>
         </entry>
       </elementAttributes>
-      <pos x="580" y="340"/>
+      <pos x="580" y="480"/>
     </visualElement>
   </visualElements>
   <wires>

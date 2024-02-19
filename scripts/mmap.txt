@@ -1,0 +1,65 @@
+00: irq0  # Effectively reserved for reset
+02: irq1
+04: irq2
+06: irq3
+08: irq4
+10: irq5
+12: irq6
+14: irq7
+16: exc0  # IllegalInstruction
+18: exc1  # InvalidMemoryAccess
+20: exc2  # PageFaultException 
+22: exc3
+24: exc4
+26: exc5
+28: exc6
+30: exc7
+32: sys0
+34: sys1
+36: sys2
+38: sys3
+40: sys4
+42: sys5
+44: sys6
+46: sys7
+48: sys8
+50: sys9
+52: sys10
+54: sys11
+56: sys12
+58: sys13
+60: sys14
+62: sys15
+64: reg0
+68: reg1
+70: reg2
+72: reg3
+74: reg4
+76: reg5
+78: reg6
+80: reg7
+82: reg8
+84: reg9
+86: reg10
+88: reg11
+90: reg12
+92: reg13
+94: reg14
+96: reg15
+98:
+100:
+102:
+104:
+106:
+108:
+110:
+112:
+114:
+116:
+118:
+120:
+122:
+124:
+126:
+128:
+130:  # Furthest jr destination for irq0

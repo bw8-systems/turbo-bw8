@@ -89,7 +89,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>WrBackEn</string>
+          <string>WrBackEn&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -125,7 +125,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>MemMode</string>
+          <string>MemMode&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -233,7 +233,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>AluRes</string>
+          <string>AluRes&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -298,7 +298,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>DataSrc</string>
+          <string>DataSrc&apos;</string>
         </entry>
         <entry>
           <string>Bits</string>
