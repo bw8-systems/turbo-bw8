@@ -63,8 +63,7 @@
     }
 }
 
-; TODO: Rename
-#subruledef mem16_imm {
+#subruledef s5_aligned {
     {imm: s5} => {
         assert(imm & 0b1 == 0x00)
         imm
@@ -151,8 +150,8 @@
     ld8 {rd: gpr}, {rs: gpr}, {imm: s5} => 0b10 @ 0b0 @ imm[0:0] @ imm[3:1] @ imm[4:4] @ rs @ rd
     st8 {rs: gpr}, {rd: gpr}, {imm: s5} => 0b10 @ 0b1 @ imm[0:0] @ imm[3:1] @ imm[4:4] @ rs @ rd
 
-    ld {rd: gpr}, {rs: gpr}, {imm: mem16_imm} => 0b110 @ 0b0 @ imm[3:1] @ imm[4:4] @ rs @ rd
-    st {rs: gpr}, {rd: gpr}, {imm: mem16_imm} => 0b110 @ 0b1 @ imm[3:1] @ imm[4:4] @ rs @ rd
+    ld {rd: gpr}, {rs: gpr}, {imm: s5_aligned} => 0b110 @ 0b0 @ imm[3:1] @ imm[4:4] @ rs @ rd
+    st {rs: gpr}, {rd: gpr}, {imm: s5_aligned} => 0b110 @ 0b1 @ imm[3:1] @ imm[4:4] @ rs @ rd
 
     {func: func} {rd: gpr}, {rs: gpr} => 0b1110 @ func @ rs @ rd
 
@@ -165,7 +164,7 @@
 
     {func: op11} {rd: gpr}, {imm: i5} => 0b1111 @ 0b0 @ func @ imm[4:0] @ rd
 
-    {j: jump} {rs: gpr}, {imm: mem16_imm} => 0b1111 @ 0b0 @ 0b11 @ imm[4:4] @ rs @ j @ imm[3:1]
+    {j: jump} {rs: gpr}, {imm: s5_aligned} => 0b1111 @ 0b0 @ 0b11 @ imm[4:4] @ rs @ j @ imm[3:1]
 
     mv {md: mmu}, {rs: gpr} => 0b1111 @ 0b10 @ 0b0 @ 0b0 @ md @ rs
     mv {rd: gpr}, {ms: mmu} => 0b1111 @ 0b10 @ 0b0 @ 0b1 @ ms @ rd
@@ -186,10 +185,4 @@
     {int: int} {imm: u2} => 0b1111 @ 0b1111 @ 0b1111 @ 0b0 @ int @ imm
 
     {func: nullary} => 0b1111 @ 0b1111 @ 0b1111 @ 0b1 @ func
-}
-
-#bankdef test {
-    #addr 0x0000
-    #size 0xffff
-    #outp 0
 }
